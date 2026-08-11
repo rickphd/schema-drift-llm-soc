@@ -1,0 +1,3 @@
+system,n_runs,decisions_with_timing_mean,decisions_with_timing_std,pipeline_duration_ms_mean,pipeline_duration_ms_std,observe_ms_mean,observe_ms_std,normalize_schema_ms_mean,normalize_schema_ms_std,enrich_ms_mean,enrich_ms_std,retrieve_memory_ms_mean,retrieve_memory_ms_std,correlate_ms_mean,correlate_ms_std,decide_ms_mean,decide_ms_std,act_ms_mean,act_ms_std,log_ms_mean,log_ms_std
+baseline,5,0.0000,0.0000,,0.0000,,0.0000,,0.0000,,0.0000,,0.0000,,0.0000,,0.0000,,0.0000,,0.0000
+blue,5,20.0000,0.0000,12.0067,0.1677,7.1188,0.0661,0.0451,0.0016,0.0013,0.0001,0.0083,0.0004,3.9784,0.0840,0.0034,0.0003,0.1215,0.0061,0.0021,0.0001

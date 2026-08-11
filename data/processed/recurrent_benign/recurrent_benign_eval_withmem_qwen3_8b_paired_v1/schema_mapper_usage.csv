@@ -1,0 +1,6 @@
+run_id,repetition,episodes_total,llm_called_episodes,llm_call_rate,cache_hit_episodes,cache_hit_rate,gemini_source_episodes,gemini_source_rate,ollama_source_episodes,ollama_source_rate,fallback_source_episodes,fallback_source_rate,none_source_episodes,none_source_rate
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_01,1,20,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_02,2,20,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_03,3,20,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_04,4,20,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_05,5,20,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000

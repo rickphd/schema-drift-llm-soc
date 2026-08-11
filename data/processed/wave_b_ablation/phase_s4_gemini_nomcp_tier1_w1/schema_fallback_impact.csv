@@ -1,0 +1,11 @@
+run_id,repetition,episodes_total,fallback_episodes,fallback_rate,fallback_recall,fallback_fpr,fallback_fp,fallback_tp,non_fallback_episodes,non_fallback_recall,non_fallback_fpr,non_fallback_fp,non_fallback_tp,delta_recall_nonfb_minus_fb,delta_fpr_nonfb_minus_fb
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_01,1,40,16,0.4000,1.0000,,0,16,24,1.0000,0.0000,0,13,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_02,2,40,13,0.3250,1.0000,,0,13,27,1.0000,0.0000,0,16,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_03,3,40,11,0.2750,1.0000,,0,11,29,1.0000,0.0000,0,17,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_04,4,40,13,0.3250,1.0000,,0,13,27,1.0000,0.0000,0,13,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_05,5,40,15,0.3750,1.0000,,0,15,25,1.0000,0.0000,0,14,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_06,6,40,10,0.2500,1.0000,,0,10,30,1.0000,0.0000,0,14,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_07,7,40,13,0.3250,1.0000,,0,13,27,1.0000,0.0000,0,11,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_08,8,40,13,0.3250,1.0000,,0,13,27,1.0000,0.0000,0,17,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_09,9,40,18,0.4500,1.0000,,0,18,22,1.0000,0.0000,0,14,0.0000,
+blue_mem_phase_s4_gemini_nomcp_tier1_w1_rep_10,10,40,17,0.4250,1.0000,,0,17,23,1.0000,0.0000,0,16,0.0000,

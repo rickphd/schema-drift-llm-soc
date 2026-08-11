@@ -1,0 +1,6 @@
+run_id,repetition,has_swap,phase1_backend,phase1_episodes,phase1_recall_containment,phase1_recall_detection,phase1_fpr_containment,phase1_mttd_mean,phase1_mttr_mean,phase2_backend,phase2_episodes,phase2_recall_containment,phase2_recall_detection,phase2_fpr_containment,phase2_mttd_mean,phase2_mttr_mean,delta_recall_containment_p2_minus_p1,delta_recall_detection_p2_minus_p1,delta_fpr_containment_p2_minus_p1,delta_mttd_p2_minus_p1,delta_mttr_p2_minus_p1
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_01,1,False,backend_a,12,,,0.3333,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_02,2,False,,0,,,,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_03,3,False,,0,,,,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_04,4,False,backend_a,12,,,0.3333,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_05,5,False,backend_a,12,,,0.3333,,,,0,,,,,,,,,,

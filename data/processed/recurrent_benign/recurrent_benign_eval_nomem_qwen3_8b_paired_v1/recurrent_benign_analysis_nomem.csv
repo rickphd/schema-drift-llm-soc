@@ -1,0 +1,6 @@
+repetition,episodes_total,no_block_episodes,no_block_rate,escalate_episodes,escalate_rate,block_ip_episodes,block_ip_rate,memory_hit_episodes,memory_hit_rate,memory_fp_consensus_episodes,memory_fp_consensus_rate,memory_suppressed_episodes,memory_suppressed_rate,memory_downgraded_episodes,memory_downgraded_rate
+1,20,0,0.0000,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+2,20,0,0.0000,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+3,20,0,0.0000,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+4,20,0,0.0000,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+5,20,0,0.0000,0,0.0000,20,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000

@@ -1,0 +1,6 @@
+run_id,repetition,has_swap,phase1_backend,phase1_episodes,phase1_recall_containment,phase1_recall_detection,phase1_fpr_containment,phase1_mttd_mean,phase1_mttr_mean,phase2_backend,phase2_episodes,phase2_recall_containment,phase2_recall_detection,phase2_fpr_containment,phase2_mttd_mean,phase2_mttr_mean,delta_recall_containment_p2_minus_p1,delta_recall_detection_p2_minus_p1,delta_fpr_containment_p2_minus_p1,delta_mttd_p2_minus_p1,delta_mttr_p2_minus_p1
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_01,1,False,backend_a,20,,,0.0000,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_02,2,False,backend_a,20,,,0.0000,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_03,3,False,backend_a,20,,,0.0000,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_04,4,False,backend_a,20,,,0.0000,,,,0,,,,,,,,,,
+blue_mem_recurrent_benign_eval_withmem_qwen3_8b_paired_v1_rep_05,5,False,backend_a,20,,,0.0000,,,,0,,,,,,,,,,

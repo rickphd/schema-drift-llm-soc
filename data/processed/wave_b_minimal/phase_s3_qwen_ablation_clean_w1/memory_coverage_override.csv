@@ -1,0 +1,11 @@
+run_id,repetition,episodes_total,memory_hit_episodes,memory_coverage_rate,memory_override_episodes,memory_override_rate,memory_override_given_hit_rate,memory_influence_episodes,memory_influence_rate,memory_influence_given_hit_rate,memory_reinforce_episodes,memory_promote_episodes,memory_downgrade_episodes,override_TP,override_FP,override_TN,override_FN,no_override_TP,no_override_FP,no_override_TN,no_override_FN
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_01,1,40,29,0.7250,8,0.2000,0.2759,29,0.7250,1.0000,21,8,0,8,0,0,0,21,0,11,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_02,2,40,29,0.7250,10,0.2500,0.3448,29,0.7250,1.0000,19,10,0,10,0,0,0,19,0,11,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_03,3,40,28,0.7000,8,0.2000,0.2857,28,0.7000,1.0000,20,8,0,8,0,0,0,20,0,12,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_04,4,40,26,0.6500,5,0.1250,0.1923,26,0.6500,1.0000,21,5,0,5,0,0,0,21,0,14,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_05,5,40,29,0.7250,9,0.2250,0.3103,29,0.7250,1.0000,20,9,0,9,0,0,0,20,0,11,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_06,6,40,23,0.5750,9,0.2250,0.3913,23,0.5750,1.0000,14,9,0,9,0,0,0,15,0,16,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_07,7,40,23,0.5750,7,0.1750,0.3043,23,0.5750,1.0000,16,7,0,7,0,0,0,17,0,16,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_08,8,40,29,0.7250,12,0.3000,0.4138,29,0.7250,1.0000,16,12,0,12,0,0,0,18,0,10,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_09,9,40,31,0.7750,12,0.3000,0.3871,31,0.7750,1.0000,19,12,0,12,0,0,0,20,0,8,0
+blue_mem_phase_s3r_qwen_ablation_clean_w1_rep_10,10,40,32,0.8000,12,0.3000,0.3750,32,0.8000,1.0000,20,12,0,12,0,0,0,21,0,7,0

@@ -1,0 +1,11 @@
+run_id,repetition,episodes_total,llm_called_episodes,llm_call_rate,cache_hit_episodes,cache_hit_rate,gemini_source_episodes,gemini_source_rate,ollama_source_episodes,ollama_source_rate,fallback_source_episodes,fallback_source_rate,none_source_episodes,none_source_rate
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_01,1,40,6,0.1500,22,0.5500,10,0.2500,0,0.0000,19,0.4750,11,0.2750
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_02,2,40,5,0.1250,24,0.6000,1,0.0250,0,0.0000,17,0.4250,11,0.2750
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_03,3,40,1,0.0250,27,0.6750,0,0.0000,0,0.0000,12,0.3000,12,0.3000
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_04,4,40,2,0.0500,24,0.6000,0,0.0000,0,0.0000,15,0.3750,14,0.3500
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_05,5,40,0,0.0000,29,0.7250,0,0.0000,0,0.0000,15,0.3750,11,0.2750
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_06,6,40,0,0.0000,24,0.6000,0,0.0000,0,0.0000,10,0.2500,16,0.4000
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_07,7,40,1,0.0250,23,0.5750,0,0.0000,0,0.0000,14,0.3500,16,0.4000
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_08,8,40,2,0.0500,28,0.7000,0,0.0000,0,0.0000,15,0.3750,10,0.2500
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_09,9,40,2,0.0500,30,0.7500,0,0.0000,0,0.0000,20,0.5000,8,0.2000
+blue_mem_phase_s4_ablation_gemini_nomcp_w1_rep_10,10,40,1,0.0250,32,0.8000,0,0.0000,0,0.0000,18,0.4500,7,0.1750

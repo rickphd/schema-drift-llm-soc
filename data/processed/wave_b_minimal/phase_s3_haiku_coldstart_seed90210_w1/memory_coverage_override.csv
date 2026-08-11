@@ -1,0 +1,11 @@
+run_id,repetition,episodes_total,memory_hit_episodes,memory_coverage_rate,memory_override_episodes,memory_override_rate,memory_override_given_hit_rate,memory_influence_episodes,memory_influence_rate,memory_influence_given_hit_rate,memory_reinforce_episodes,memory_promote_episodes,memory_downgrade_episodes,override_TP,override_FP,override_TN,override_FN,no_override_TP,no_override_FP,no_override_TN,no_override_FN
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_01,1,40,22,0.5500,7,0.1750,0.3182,22,0.5500,1.0000,15,7,0,7,0,0,0,15,0,18,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_02,2,40,24,0.6000,7,0.1750,0.2917,24,0.6000,1.0000,17,7,0,7,0,0,0,17,0,16,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_03,3,40,26,0.6500,10,0.2500,0.3846,26,0.6500,1.0000,16,10,0,10,0,0,0,16,0,14,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_04,4,40,24,0.6000,5,0.1250,0.2083,24,0.6000,1.0000,19,5,0,5,0,0,0,19,0,16,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_05,5,40,22,0.5500,9,0.2250,0.4091,22,0.5500,1.0000,13,9,0,9,0,0,0,13,0,18,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_06,6,40,25,0.6250,9,0.2250,0.3600,25,0.6250,1.0000,16,9,0,9,0,0,0,17,0,14,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_07,7,40,25,0.6250,8,0.2000,0.3200,25,0.6250,1.0000,17,8,0,8,0,0,0,18,0,14,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_08,8,40,26,0.6500,8,0.2000,0.3077,25,0.6250,0.9615,17,8,0,8,0,0,0,19,0,13,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_09,9,40,24,0.6000,9,0.2250,0.3750,23,0.5750,0.9583,13,9,0,9,0,0,0,16,0,15,0
+blue_mem_phase_s3_haiku_coldstart_seed90210_w1_rep_10,10,40,25,0.6250,7,0.1750,0.2800,25,0.6250,1.0000,18,7,0,7,0,0,0,19,0,14,0

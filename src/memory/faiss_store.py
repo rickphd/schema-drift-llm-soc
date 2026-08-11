@@ -1,0 +1,183 @@
+from __future__ import annotations
+
+import json
+import os
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from typing import Any, Dict, List, Optional
+
+import numpy as np
+from sentence_transformers import SentenceTransformer
+import faiss  # faiss-cpu; import after torch-backed sentence-transformers on macOS
+
+_MODEL_BY_NAME: Dict[str, SentenceTransformer] = {}
+
+
+def _iso_now() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+
+def _l2_normalize(v: np.ndarray) -> np.ndarray:
+    n = np.linalg.norm(v, axis=1, keepdims=True) + 1e-12
+    return v / n
+
+
+def _select_device() -> str:
+    """Pick the best PyTorch device available. Prefers Apple Metal (MPS) on M-series.
+
+    Honors the PAPER_AHMED_FORCE_CPU env var (set to "1") to bypass acceleration.
+    """
+    if os.environ.get("PAPER_AHMED_FORCE_CPU") == "1":
+        return "cpu"
+    try:
+        import torch
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            return "mps"
+        if torch.cuda.is_available():
+            return "cuda"
+    except ImportError:
+        pass
+    return "cpu"
+
+
+def _get_embedding_model(model_name: str) -> SentenceTransformer:
+    model = _MODEL_BY_NAME.get(model_name)
+    if model is None:
+        model = SentenceTransformer(model_name, device=_select_device())
+        _MODEL_BY_NAME[model_name] = model
+    return model
+
+
+@dataclass
+class MemoryHit:
+    score: float
+    case: Dict[str, Any]
+
+
+class FaissMemory:
+    """
+    Memoria vectorial persistente:
+    - data/memory/cases.jsonl  (casos legibles)
+    - data/memory/index.faiss  (índice FAISS)
+    Cosine similarity vía Inner Product con embeddings normalizados.
+    """
+
+    def __init__(
+        self,
+        dir_path: str = "data/memory",
+        model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
+    ) -> None:
+        self.dir_path = dir_path
+        self.cases_path = os.path.join(dir_path, "cases.jsonl")
+        self.index_path = os.path.join(dir_path, "index.faiss")
+        os.makedirs(self.dir_path, exist_ok=True)
+
+        self.model = _get_embedding_model(model_name)
+        self.dim = self.model.get_sentence_embedding_dimension()
+
+        self.cases: List[Dict[str, Any]] = []
+        self.index = faiss.IndexFlatIP(self.dim)
+
+        self._load()
+
+    def _embed(self, texts: List[str]) -> np.ndarray:
+        embs = self.model.encode(texts, convert_to_numpy=True, show_progress_bar=False)
+        embs = embs.astype("float32")
+        if embs.ndim == 1:
+            embs = embs.reshape(1, -1)
+        return _l2_normalize(embs)
+
+    def reset(self) -> None:
+        #borra casos e índice pero mantiene la carpeta y el índice vacío
+        os.makedirs(self.dir_path, exist_ok=True)
+        open(self.cases_path, "w", encoding="utf-8").close()
+        self.cases = []
+        self.index = faiss.IndexFlatIP(self.dim)
+        self._persist_index()
+        
+    def _load(self) -> None:
+    # carga casos
+        self.cases = []
+        if os.path.exists(self.cases_path):
+            with open(self.cases_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        self.cases.append(json.loads(line))
+
+        # carga/reconstruye índice con sanity check
+        need_rebuild = True
+        if os.path.exists(self.index_path) and len(self.cases) > 0:
+            idx = faiss.read_index(self.index_path)
+            if getattr(idx, "d", None) == self.dim and idx.ntotal == len(self.cases):
+                self.index = idx
+                need_rebuild = False
+
+        if need_rebuild:
+            self.index = faiss.IndexFlatIP(self.dim)
+            if len(self.cases) > 0:
+                embs = self._embed([c["text"] for c in self.cases])
+                self.index.add(embs)
+            self._persist_index()
+
+    def _persist_index(self) -> None:
+        faiss.write_index(self.index, self.index_path)
+
+    def add_case(
+        self,
+        *,
+        text: str,
+        label: str,        # "TP" | "FP" | "UNCERTAIN"
+        decision: str,     # "block_ip" | "no_block" | "escalate"
+        reason: str,
+        tags: Optional[List[str]] = None,
+        confidence: Optional[float] = None,
+        source: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        case_id = (self.cases[-1]["case_id"] + 1) if self.cases else 1
+        case = {
+            "case_id": case_id,
+            "created_at": _iso_now(),
+            "text": text,
+            "label": label,
+            "decision": decision,
+            "reason": reason,
+            "tags": tags or [],
+            "confidence": confidence,
+            "source": source or {},
+        }
+
+        with open(self.cases_path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(case, ensure_ascii=False) + "\n")
+
+        self.cases.append(case)
+        self.index.add(self._embed([text]))
+        self._persist_index()
+        return case
+    def clear(self) -> None:
+        # borra casos e índice
+        self.cases = []
+        self.index = faiss.IndexFlatIP(self.dim)
+        if os.path.exists(self.cases_path):
+            os.remove(self.cases_path)
+        if os.path.exists(self.index_path):
+            os.remove(self.index_path)
+        os.makedirs(self.dir_path, exist_ok=True)
+        self._persist_index()
+
+    def search(self, *, text: str, k: int = 3, threshold: float = 0.75) -> List[MemoryHit]:
+        if not self.cases:
+            return []
+
+        q = self._embed([text])
+        scores, idxs = self.index.search(q, k)
+
+        hits: List[MemoryHit] = []
+        for score, idx in zip(scores[0], idxs[0]):
+            if idx < 0:
+                continue
+            s = float(score)
+            if s < threshold:
+                continue
+            hits.append(MemoryHit(score=s, case=self.cases[int(idx)]))
+        return hits

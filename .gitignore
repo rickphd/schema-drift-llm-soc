@@ -1,0 +1,65 @@
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Runtime outputs
+runs/
+logs/
+outputs/
+artifacts/
+reports/
+data/runs/
+data/experiments/
+*.log
+*.tmp
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+*credential*.json
+*credentials*.json
+*service-account*.json
+*.pem
+*.key
+*.crt
+
+# Generated model/vector/cache artifacts
+models/
+checkpoints/
+model_cache/
+embedding_cache/
+vector_store/
+faiss_store/
+qdrant_storage/
+chroma/
+mlruns/
+wandb/
+*.faiss
+*.index
+*.npy
+*.npz
+*.pkl
+*.joblib
+*.sqlite
+*.sqlite3
+*.db
+*.parquet
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

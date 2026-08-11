@@ -1,0 +1,2 @@
+system,n_runs,attack_block_ip_mean,attack_block_ip_std,attack_escalate_mean,attack_escalate_std,attack_no_block_mean,attack_no_block_std,attack_with_memory_hits_mean,attack_with_memory_hits_std,attack_top_fp_hit_mean,attack_top_fp_hit_std,benign_block_ip_mean,benign_block_ip_std
+blue,10,13.9000,2.5582,14.5000,1.9579,0.0000,0.0000,27.9000,3.0350,0.0000,0.0000,0.0000,0.0000

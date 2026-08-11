@@ -1,0 +1,2 @@
+n_runs,memory_coverage_rate_mean,memory_coverage_rate_std,memory_override_rate_mean,memory_override_rate_std,memory_override_given_hit_rate_mean,memory_override_given_hit_rate_std,memory_influence_rate_mean,memory_influence_rate_std,memory_influence_given_hit_rate_mean,memory_influence_given_hit_rate_std,memory_promote_episodes_mean,memory_promote_episodes_std,memory_downgrade_episodes_mean,memory_downgrade_episodes_std
+10,0.6975,0.0759,0.2300,0.0587,0.3281,0.0676,0.6975,0.0759,1.0000,0.0000,9.2000,2.3476,0.0000,0.0000

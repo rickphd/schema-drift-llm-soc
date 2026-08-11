@@ -1,0 +1,6 @@
+run_id,repetition,episodes_total,llm_called_episodes,llm_call_rate,cache_hit_episodes,cache_hit_rate,gemini_source_episodes,gemini_source_rate,ollama_source_episodes,ollama_source_rate,fallback_source_episodes,fallback_source_rate,none_source_episodes,none_source_rate
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_01,1,12,0,0.0000,12,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_02,2,0,0,,0,,0,,0,,0,,0,
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_03,3,0,0,,0,,0,,0,,0,,0,
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_04,4,12,0,0.0000,12,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_recurrent_benign_eval_withmem_anthropic_haiku_45_rep_05,5,12,0,0.0000,12,1.0000,0,0.0000,0,0.0000,0,0.0000,0,0.0000

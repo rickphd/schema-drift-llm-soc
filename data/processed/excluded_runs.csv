@@ -1,0 +1,3 @@
+artifact_dir,experiment_id,status,reason,replacement_experiment_id
+data/processed/wave_b_ablation/phase_s4_ablation_gemini_nomcp_w1,phase_s4_ablation_gemini_nomcp_w1,excluded_infrastructure_failure,"HTTP 429 provider-transport failures affected 16 episodes across 8 of 10 repetitions; the artifact is retained for provenance only",phase_s4_gemini_nomcp_tier1_w1
+data/processed/recurrent_benign/recurrent_benign_eval_withmem_anthropic_haiku_45,recurrent_benign_eval_withmem_anthropic_haiku_45,excluded_superseded_protocol,"Historical unpaired export used 12 episodes and lacked a released no-memory control; retained for provenance but excluded from the manuscript analysis",recurrent_benign_eval_nomem_qwen3_8b_paired_v1 + recurrent_benign_eval_withmem_qwen3_8b_paired_v1

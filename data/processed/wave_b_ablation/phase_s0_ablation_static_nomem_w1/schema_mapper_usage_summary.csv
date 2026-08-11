@@ -1,0 +1,2 @@
+n_runs,llm_call_rate_mean,llm_call_rate_std,cache_hit_rate_mean,cache_hit_rate_std,gemini_source_rate_mean,gemini_source_rate_std,ollama_source_rate_mean,ollama_source_rate_std,fallback_source_rate_mean,fallback_source_rate_std,none_source_rate_mean,none_source_rate_std
+10,0.0000,0.0000,0.7400,0.0444,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000

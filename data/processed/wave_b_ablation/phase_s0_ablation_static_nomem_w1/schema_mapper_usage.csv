@@ -1,0 +1,11 @@
+run_id,repetition,episodes_total,llm_called_episodes,llm_call_rate,cache_hit_episodes,cache_hit_rate,gemini_source_episodes,gemini_source_rate,ollama_source_episodes,ollama_source_rate,fallback_source_episodes,fallback_source_rate,none_source_episodes,none_source_rate
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_01,1,40,0,0.0000,29,0.7250,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_02,2,40,0,0.0000,31,0.7750,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_03,3,40,0,0.0000,32,0.8000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_04,4,40,0,0.0000,27,0.6750,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_05,5,40,0,0.0000,30,0.7500,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_06,6,40,0,0.0000,30,0.7500,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_07,7,40,0,0.0000,27,0.6750,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_08,8,40,0,0.0000,31,0.7750,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_09,9,40,0,0.0000,28,0.7000,0,0.0000,0,0.0000,0,0.0000,0,0.0000
+blue_mem_phase_s0_ablation_static_nomem_w1_rep_10,10,40,0,0.0000,31,0.7750,0,0.0000,0,0.0000,0,0.0000,0,0.0000
